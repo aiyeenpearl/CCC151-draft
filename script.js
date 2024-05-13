@@ -66,5 +66,3 @@ document.querySelectorAll('.input-field input').forEach(input => {
     }
   });
 });
-
-
