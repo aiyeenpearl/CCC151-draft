@@ -64,13 +64,14 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #36C172;  /* Updated color */
+  color: #06AE57;  /* Updated color */
   margin-bottom: 10px;
 }
 
+
 .input-field {
     position: relative; /* Allows absolute positioning of the icon inside */
-    width: 60%; /* Adjust this to desired width */
+    width: 100%; /* Adjust this to desired width */
     margin: 10px auto; /* Centers the field and adds vertical spacing */
     display: flex; /* Using flexbox to align icon and input */
     align-items: center; /* Aligns children (icon and input) vertically */
@@ -98,12 +99,11 @@ form.sign-in-form {
     box-shadow: none; /* No shadow for a flat design */
     outline: none; /* Remove outline on focus */
     font-family: 'Roboto', sans-serif; 
-
 }
 
 
 .input-field input:focus {
-    border-color: #36C172; /* Darker border on focus for visibility */
+    border-color: #06AE57; /* Darker border on focus for visibility */
 }
 
 .input-field input.invalid {
@@ -174,13 +174,13 @@ form.sign-in-form {
 }
 
 .social-icon:hover {
-  color: #36C172;
-  border-color: #36C172;
+  color: #06AE57;
+  border-color: #06AE57;
 }
 
 .btn {
   width: 150px;
-  background-color: #36C172;
+  background-color: #06AE57;
   border: none;
   outline: none;
   height: 49px;
@@ -194,11 +194,8 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: transparent; /* Removes the background color */
-  color: #36C172; /* Changes text color to #36C172 */
-  border: 2px solid #36C172; /* Adds a solid border with the color #36C172 */
+  background-color: #06AE57;
 }
-
 .panels-container {
   position: absolute;
   height: 100%;
@@ -217,7 +214,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #36C172 0%,#36C172 100%);
+  background-image: linear-gradient(-45deg, #39B968 0%, #39B968 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -274,10 +271,6 @@ form.sign-in-form {
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
-}
-
-.btn.transparent:hover {
-  color: #fff; /* Changes the text color to #F4423F */
 }
 
 .right-panel .image,
@@ -516,10 +509,13 @@ form.sign-in-form {
 .forgot-password-link {
   text-decoration: none; /* Optional: removes underline */
   font-size: 0.9rem;
-  color: #36C172;
+  color: #06AE57;
   cursor: pointer;
 }
 
 .forgot-password-link:hover {
   text-decoration: underline; /* Adds underline on hover for better UX */
 }
+
+
+
