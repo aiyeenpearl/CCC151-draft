@@ -62,3 +62,56 @@ function handleLogin() {
     // Add the "active" class to the Dashboard menu link
     dashboardLink.classList.add('active');
 }
+
+
+
+
+// Get elements
+const personalprofForm = document.getElementById("personalprofForm");
+const editButton = document.getElementById('editButton');
+const closeButton = document.getElementById('closeButton');
+const firstNameText = document.getElementById('firstNameText');
+const lastNameText = document.getElementById('lastNameText');
+const emailText = document.getElementById('emailText');
+const phoneNumberText = document.getElementById('phoneNumberText');
+const affiliationText = document.getElementById('affiliationText');
+const firstNameInput = document.getElementById('firstName');
+const lastNameInput = document.getElementById('lastName');
+const emailInput = document.getElementById('email');
+const phoneNumberInput = document.getElementById('phoneNumber');
+const affiliationInput = document.getElementById('affiliation');
+
+// Function to show profile form
+function showProfileForm() {
+    personalprofForm.style.display = "block";
+    // Populate form with existing profile data
+    firstNameInput.value = firstNameText.textContent;
+    lastNameInput.value = lastNameText.textContent;
+    emailInput.value = emailText.textContent;
+    phoneNumberInput.value = phoneNumberText.textContent;
+    affiliationInput.value = affiliationText.textContent;
+}
+
+// Function to hide profile form
+function hideProfileForm() {
+    personalprofForm.style.display = "none";
+}
+
+// Event listener for edit button
+editButton.addEventListener('click', showProfileForm);
+
+// Event listener for close button
+closeButton.addEventListener('click', hideProfileForm);
+
+// Event listener for form submission
+personalprofForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  // Update profile details with form values
+  firstNameText.textContent = firstNameInput.value;
+  lastNameText.textContent = lastNameInput.value;
+  emailText.textContent = emailInput.value;
+  phoneNumberText.textContent = phoneNumberInput.value;
+  affiliationText.textContent = affiliationInput.value;
+  // Hide profile form
+  hideProfileForm();
+});
