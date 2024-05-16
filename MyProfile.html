@@ -7,9 +7,8 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet" />
     <link rel="stylesheet" href="stilo.css" />
-    <title>MyProfile</title>
+    <title>My Profile</title>
   </head>
-
   <body>
     <div class="container">
       <!-- Sidebar Section -->
@@ -17,7 +16,7 @@
         <div class="toggle">
           <div class="logo">
             <a href="Homepage.html">
-              <img src="logogo.png" />
+              <img src="logogo.png" alt="Logo" />
             </a>
             <a href="Homepage.html">
               <h2><span class="danger">Eco</span>Ride</h2>
@@ -33,11 +32,13 @@
             <span class="material-icons-sharp"> dashboard </span>
             <h3>Dashboard</h3>
           </a>
-          <a href="MyProfile.html" id="myProfileLink" class="dashboard-link active">
+          <a
+            href="MyProfile.html"
+            id="myProfileLink"
+            class="dashboard-link active">
             <span class="material-icons-sharp"> person_outline </span>
             <h3>My Profile</h3>
           </a>
-
           <a href="DailyTask.html">
             <span class="material-icons-sharp"> workspace_premium </span>
             <h3>Daily Task</h3>
@@ -58,11 +59,7 @@
             <span class="material-icons-sharp"> comment </span>
             <h3>Feedback</h3>
           </a>
-          <a href="Settings.html">
-            <span class="material-icons-sharp"> settings </span>
-            <h3>Settings</h3>
-          </a>
-           <a href="Login.html" class="logout">
+          <a href="Login.html" class="logout">
             <span class="material-icons-sharp"> logout </span>
             <h3>Logout</h3>
           </a>
@@ -74,108 +71,84 @@
       <main>
         <div id="content-area">
           <h1>My profile</h1>
-          <!-- Analyses -->
-          <div class="analyse">
-            <div class="sales">
-              <div class="status">
-                <div class="info">
-                  <h3>Dist. Traveled</h3>
-                  <h1>550m</h1>
-                </div>
-                <div class="progresss">
-                  <svg>
-                    <circle cx="38" cy="38" r="36"></circle>
-                  </svg>
-                  <div class="percentage">
-                    <p>+81%</p>
-                  </div>
-                </div>
-              </div>
-              <small class="text-muted">Last 30 days</small>
-            </div>
-            <div class="visits">
-              <div class="status">
-                <div class="info">
-                  <h3>Total (EG)</h3>
-                  <h1>32 kWh</h1>
-                </div>
-                <div class="progresss">
-                  <svg>
-                    <circle cx="38" cy="38" r="36"></circle>
-                  </svg>
-                  <div class="percentage">
-                    <p>-48%</p>
-                  </div>
-                </div>
-              </div>
-              <small class="text-muted">Last 30 days</small>
-            </div>
-            <div class="searches">
-              <div class="status">
-                <div class="info">
-                  <h3>Burnt Calories</h3>
-                  <h1>800 cal</h1>
-                </div>
-                <div class="progresss">
-                  <svg>
-                    <circle cx="38" cy="38" r="36"></circle>
-                  </svg>
-                  <div class="percentage">
-                    <p>+21%</p>
-                  </div>
-                </div>
-              </div>
-              <small class="text-muted">Last 24 hours</small>
-            </div>
-          </div>
-          <!-- End of Analyses -->
 
-          <!-- New Users Section -->
-          <div class="new-users">
-            <h2>Vacant Bicycle</h2>
-            <div class="user-list">
-              <div class="user">
-                <img src="3green.png" />
-                <h2>Entrance</h2>
-                <p>Show location</p>
+          <form id="profile-form">
+            <h2>Profile Photo</h2>
+            <div class="profile-picture-container">
+              <input
+                type="file"
+                id="profile-picture"
+                name="profile-picture"
+                accept="image/*" />
+              <div
+                class="profile-picture-preview"
+                id="profile-picture-preview"></div>
+            </div>
+            <div class="profile-buttons">
+              <button type="button" id="remove-photo">Remove Photo</button>
+              <button type="button" id="update-photo">Update Photo</button>
+            </div>
+            <div class="profile-id">
+              <label for="user-id">ID:</label>
+              <p id="user-id">12345678</p>
+              <!-- Replace with dynamic ID if needed -->
+            </div>
+            <!-- User Information -->
+            <div class="user-details">
+              <div class="user-field">
+                <label for="username">Username:</label>
+                <p id="username">JohnDoe</p>
               </div>
-              <div class="user">
-                <img src="1green.png" />
-                <h2>CASS</h2>
-                <p>Show location</p>
+              <div class="user-field">
+                <label for="full-name">Full Name:</label>
+                <p id="full-name">John Doe</p>
               </div>
-              <div class="user">
-                <img src="5green.png" />
-                <h2>Gymnasium</h2>
-                <p>Show location</p>
-              </div>
-              <div class="user">
-                <img src="2green.png" />
-                <h2>Bahay Alumni</h2>
-                <p>Show location</p>
+              <div class="user-field">
+                <label for="email">Email:</label>
+                <p id="email">johndoe@example.com</p>
               </div>
             </div>
-          </div>
-          <!-- End of New Users Section -->
+          </form>
+          <!-- End of user profile form -->
 
-          <!-- Recent Orders Table -->
-          <div class="recent-orders">
-            <h2>Activities</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Bicycle Number</th>
-                  <th>Energy Generated (EG)</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-            <a href="#">Show All</a>
+          <!-- Add your new content here -->
+          <div class="holder">
+            <div class="column">
+              <form id="add-user-form">
+                <h2>Account Settings</h2>
+                <!-- Form for adding a new user -->
+                <label>Full Name<input type="text" id="name" required /></label>
+                <label>Username<input type="text" id="email" required /></label>
+                <label>Email<input type="email" id="age" required /></label>
+                <button type="submit" name="submit">Update</button>
+              </form>
+            </div>
+            <div class="column">
+              <form id="update-form">
+                <h2>Security</h2>
+                <label
+                  >New Password<input type="text" id="name" required
+                /></label>
+                <label
+                  >Confirm Password<input type="text" id="email" required
+                /></label>
+                <button type="submit" name="submit">Update</button>
+              </form>
+            </div>
+            <div class="column">
+              <form id="delete-form">
+                <h2>Delete Account</h2>
+                <!-- Form for deleting a user -->
+                <button type="submit" name="submit">Delete</button>
+              </form>
+            </div>
           </div>
-          <!-- End of Recent Orders -->
+          <br />
+          <table id="users-table" class="column-span">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+          <!-- End of New content -->
         </div>
       </main>
       <!-- End of Main Content -->
@@ -194,125 +167,14 @@
 
           <div class="profile">
             <div class="profile-photo">
-              <img src="profile-0.jpg" />
+              <img src="profile-0.jpg" alt="Profile Photo" />
             </div>
           </div>
         </div>
         <!-- End of Nav -->
-
-        <div class="user-profile">
-          <div class="logo">
-            <script
-              src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-              type="module"></script>
-            <dotlottie-player
-              id="lottiePlayer"
-              background="transparent"
-              speed="1"
-              style="width: 300px; height: 300px"
-              loop
-              autoplay></dotlottie-player>
-            <p id="profileText">
-              Hey EcoRiders! Every pedal pushes for a greener campus! Ride with
-              purpose, cut emissions, and fuel sustainability - every pedal
-              counts!🚲🌏
-            </p>
-          </div>
-        </div>
-
-        <script>
-          // Define an array of content to rotate
-          const contentArray = [
-            {
-              lottieSrc:
-                "https://lottie.host/13fa50f4-c231-47d1-a6ec-a21fe9ff7ae9/G3gsaqZFOr.json",
-              text: "Hey EcoRiders! Every pedal pushes for a greener campus! Ride with purpose, cut emissions, and fuel sustainability - every pedal counts!🚲🌏",
-            },
-            {
-              text: "Encourage your friends and classmates to join in on the eco-friendly fun! The more people using EcoRide, the bigger the positive impact on our campus environment.🌱",
-            },
-            {
-              text: "Don't hog the bikes! If you've reached your destination and see someone else eyeing the bike, consider unlocking it for them through the app. Sharing is caring, after all.💚",
-            },
-            {
-              text: "If you spot a bike with a flat tire or a faulty lock, report it ASAP on the EcoRide app. Quick fixes mean safer rides for everyone! 🚲🔧",
-            },
-          ];
-
-          let currentIndex = 0;
-
-          // Function to update content
-          function updateContent() {
-            // Update Lottie animation source
-            document
-              .getElementById("lottiePlayer")
-              .setAttribute("src", contentArray[currentIndex].lottieSrc);
-            // Update text content
-            document.getElementById("profileText").textContent =
-              contentArray[currentIndex].text;
-            // Increment index or reset to 0 if exceeding array length
-            currentIndex = (currentIndex + 1) % contentArray.length;
-          }
-
-          // Initial call to update content
-          updateContent();
-
-          // Set interval to update content every 5 seconds
-          setInterval(updateContent, 3000);
-        </script>
-
-        <div class="reminders">
-          <div class="header">
-            <h2>Badges</h2>
-          </div>
-
-          <div class="notification">
-            <div class="icon">
-              <img
-                src="calories.png"
-                style="max-width: 50px; max-height: 50px" />
-            </div>
-            <div class="content">
-              <div class="text">
-                <h3>
-                  Earned the EcoWarrior Badge for Burning 1600 Calories in a
-                  Day!
-                </h3>
-                <small class="text_muted"> May 18, 2024 </small>
-              </div>
-            </div>
-          </div>
-
-          <div class="notification deactive">
-            <div class="icon">
-              <img
-                src="distance.png"
-                style="max-width: 50px; max-height: 50px" />
-            </div>
-            <div class="content">
-              <div class="text">
-                <h3>
-                  Earned the Green Traveler Badge for Biking 1 km in a Day!
-                </h3>
-                <small class="text_muted"> May 13, 2024 </small>
-              </div>
-            </div>
-          </div>
-          <a
-            href="#"
-            style="
-              color: #36c172;
-              float: right;
-              margin-bottom: 20px;
-              margin-right: 10px;
-            "
-            >Show All</a
-          >
-        </div>
       </div>
     </div>
-
-    <script src="orders.js"></script>
     <script src="index.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
