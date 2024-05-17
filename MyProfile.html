@@ -73,7 +73,7 @@
           <h1>My profile</h1>
 
           <form id="profile-form">
-            <h2>Profile Photo</h2>
+            <h2>Personal Details</h2>
             <div class="profile-picture-container">
               <input
                 type="file"
@@ -107,41 +107,50 @@
                 <label for="email">Email:</label>
                 <p id="email">johndoe@example.com</p>
               </div>
+              
+            </div>
+            <div class="holder">
+              <div class="column">
+                <form id="add-user-form">
+                  <h2>Account Settings</h2>
+                  <!-- Form for adding a new user -->
+                  <label
+                    >Full Name<input type="text" id="name" required
+                  /></label>
+                  <label
+                    >Username<input type="text" id="email" required
+                  /></label>
+                  <label>Email<input type="email" id="age" required /></label>
+                  <button type="submit" name="submit">Update</button>
+                </form>
+              </div>
+              <div class="column">
+                <form id="update-form">
+                  <h2>Security</h2>
+                  <label
+                    >New Password<input type="text" id="name" required
+                  /></label>
+                  <label
+                    >Confirm Password<input type="text" id="email" required
+                  /></label>
+                  <button type="submit" name="submit">Update</button>
+                </form>
+              </div>
+              <div class="column">
+                <form id="delete-form">
+                 
+                  <!-- Form for deleting a user -->
+                 
+                </form>
+              </div>
             </div>
           </form>
           <!-- End of user profile form -->
 
           <!-- Add your new content here -->
           <div class="holder">
-            <div class="column">
-              <form id="add-user-form">
-                <h2>Account Settings</h2>
-                <!-- Form for adding a new user -->
-                <label>Full Name<input type="text" id="name" required /></label>
-                <label>Username<input type="text" id="email" required /></label>
-                <label>Email<input type="email" id="age" required /></label>
-                <button type="submit" name="submit">Update</button>
-              </form>
-            </div>
-            <div class="column">
-              <form id="update-form">
-                <h2>Security</h2>
-                <label
-                  >New Password<input type="text" id="name" required
-                /></label>
-                <label
-                  >Confirm Password<input type="text" id="email" required
-                /></label>
-                <button type="submit" name="submit">Update</button>
-              </form>
-            </div>
-            <div class="column">
-              <form id="delete-form">
-                <h2>Delete Account</h2>
-                <!-- Form for deleting a user -->
-                <button type="submit" name="submit">Delete</button>
-              </form>
-            </div>
+     
+
           </div>
           <br />
           <table id="users-table" class="column-span">
