@@ -854,7 +854,7 @@ main .recent-orders a {
 }
 
 .column-span {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span ;
 }
 
 form {
@@ -863,7 +863,7 @@ form {
   padding: 1.8rem;
   background-color: #fff;
   margin-top: -27px;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 }
 
 form h3 {
@@ -900,11 +900,7 @@ form button {
   transition: 0.5s;
 }
 
-/* Specific styles for the delete button on hover */
-#delete-form button:hover {
-  color: #f4423f;
-  border: 2px solid #f4423f;
-}
+
 
 form button:hover {
   background-color: #fff;
@@ -1038,6 +1034,7 @@ form button:hover {
 
 button[type="submit"][name="submit"] {
   border-radius: 8px;
+  
 }
 
 #delete-form {
@@ -1050,20 +1047,19 @@ button[type="submit"][name="submit"] {
 .delete-button {
   position: absolute;
   bottom: -85px; /* Adjust as needed */
-  left: 230px; /* Adjust as needed */
-  color: rgb(255, 0, 0);
+  left: 260px; /* Adjust as needed */
+  color: white;
   border: none; /* Remove border */
   border-radius: 8px;
   cursor: pointer;
-  background-color: transparent; /* Ensure it's transparent initially */
+  background-color: #f4423f;
   padding: 10px 15px; /* Adjust padding as needed */
   transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .delete-button:hover {
-  background-color: #fff; /* Light grey on hover */
-  border: #fff;
-  color: grey;
+  border: #f4423f;
+  color: var(--color-danger);
 }
 
 button#remove-photo,
@@ -1081,4 +1077,3 @@ button#update-photo:hover {
   background-color: #f2f2f2; /* Light grey background on hover */
   color:#36c172; /* Primary color (blue) text on hover */
 }
-
