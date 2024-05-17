@@ -74,6 +74,7 @@ h1 {
 h2 {
   font-weight: 600;
   font-size: 1.4rem;
+  padding-top: -100px;
 }
 
 h3 {
@@ -845,16 +846,21 @@ main .recent-orders a {
 
 .holder {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
 }
 
 .column {
   padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+
 }
 
 .column-span {
-  grid-column: 1 / span ;
+  grid-column: 1 / span;
 }
 
 form {
@@ -867,19 +873,25 @@ form {
 }
 
 form h3 {
-  margin-top: 0;
+  margin-top: 0px;
   margin-bottom: 10px;
 }
+
+form h2 {
+  margin-bottom: 10px;
+}
+
 
 form label {
   display: block;
   margin-bottom: 10px;
+
 }
 
 form input[type="text"],
-form input[type="email"],
-form input[type="number"] {
-  width: 92.5%;
+form input[type="text"],
+form input[type="email"] {
+  width: 100.5%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -899,8 +911,6 @@ form button {
   cursor: pointer;
   transition: 0.5s;
 }
-
-
 
 form button:hover {
   background-color: #fff;
@@ -1034,7 +1044,6 @@ form button:hover {
 
 button[type="submit"][name="submit"] {
   border-radius: 8px;
-  
 }
 
 #delete-form {
@@ -1046,8 +1055,8 @@ button[type="submit"][name="submit"] {
 
 .delete-button {
   position: absolute;
-  bottom: -85px; /* Adjust as needed */
-  left: 260px; /* Adjust as needed */
+  bottom: -124px; /* Adjust as needed */
+  left: 258px; /* Adjust as needed */
   color: white;
   border: none; /* Remove border */
   border-radius: 8px;
@@ -1055,11 +1064,13 @@ button[type="submit"][name="submit"] {
   background-color: #f4423f;
   padding: 10px 15px; /* Adjust padding as needed */
   transition: background-color 0.3s ease; /* Smooth transition */
+  box-shadow: #000000;
 }
 
 .delete-button:hover {
   border: #f4423f;
   color: var(--color-danger);
+  background-color: var(--color-white);
 }
 
 button#remove-photo,
@@ -1075,5 +1086,5 @@ button#update-photo {
 button#remove-photo:hover,
 button#update-photo:hover {
   background-color: #f2f2f2; /* Light grey background on hover */
-  color:#36c172; /* Primary color (blue) text on hover */
+  color: #36c172; /* Primary color (blue) text on hover */
 }
