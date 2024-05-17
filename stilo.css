@@ -856,7 +856,6 @@ main .recent-orders a {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-
 }
 
 .column-span {
@@ -899,12 +898,12 @@ form input[type="email"] {
 
 form button {
   width: 150px;
-  background-color: #f2f3f5;
+  background-color: #f2f2f2;
   border: none;
   outline: none;
   height: 49px;
   border-radius: 0px;
-  color: #000000;
+  color: #000;
 
   font-weight: 600;
   margin: 10px 0;
@@ -913,9 +912,8 @@ form button {
 }
 
 form button:hover {
-  background-color: #fff;
-  color: #36c172;
-  border: 2px solid #36c172;
+ background-color: var(--color-light); /* Light grey background on hover */
+  color: #000; /* Primary color (blue) text on hover */
 }
 
 #profile-info-table {
@@ -1017,8 +1015,8 @@ form button:hover {
 
 .user-field label {
   width: 120px;
-  font-weight: bold;
-  font-size: 20;
+  font-size: 14px;
+  color: #000;
 }
 
 .user-details {
@@ -1027,6 +1025,8 @@ form button:hover {
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 19px;
+  font-size: 15px;
+  font-weight: normal;
 }
 
 .user-field {
@@ -1037,9 +1037,9 @@ form button:hover {
 
 .user-field p {
   margin: 0;
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--color-dark-variant);
 }
 
 button[type="submit"][name="submit"] {
@@ -1055,20 +1055,17 @@ button[type="submit"][name="submit"] {
 
 .delete-button {
   position: absolute;
-  bottom: -124px; /* Adjust as needed */
+  bottom: -105px; /* Adjust as needed */
   left: 258px; /* Adjust as needed */
   color: white;
-  border: none; /* Remove border */
   border-radius: 8px;
   cursor: pointer;
   background-color: #f4423f;
   padding: 10px 15px; /* Adjust padding as needed */
-  transition: background-color 0.3s ease; /* Smooth transition */
-  box-shadow: #000000;
 }
 
 .delete-button:hover {
-  border: #f4423f;
+  border: 2px solid var(--color-danger);
   color: var(--color-danger);
   background-color: var(--color-white);
 }
@@ -1079,12 +1076,13 @@ button#update-photo {
   border-radius: 8px;
   cursor: pointer;
   padding: 10px 15px;
-  color: #000000; /* Text color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
+  color: #000; /* Text color */
+    background-color: #f2f2f2;
 }
 
 button#remove-photo:hover,
 button#update-photo:hover {
-  background-color: #f2f2f2; /* Light grey background on hover */
-  color: #36c172; /* Primary color (blue) text on hover */
+  background-color: var(--color-light); /* Light grey background on hover */
+  color: #000; /* Primary color (blue) text on hover */
 }
+
