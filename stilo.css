@@ -1041,3 +1041,31 @@ form button:hover {
   margin-bottom: 10px;
   color: #333;
 }
+
+button[type="submit"][name="submit"] {
+  border-radius: 8px;
+}
+
+#delete-form {
+  position: relative;
+  margin: 50px auto; /* Adjust margin as needed */
+  padding: 20px;
+  max-width: 400px; /* Adjust width as needed */
+}
+
+.delete-button {
+  position: absolute;
+  top: 78px; /* Adjust as needed */
+  right: 370px; /* Adjust as needed */
+  color: rgb(255, 0, 0);
+  border: none; /* Remove border */
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: transparent; /* Ensure it's transparent initially */
+  padding: 10px 15px; /* Adjust padding as needed */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.delete-button:hover {
+  background-color: #f2f2f2; /* Light grey on hover */
+}
